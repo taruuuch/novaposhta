@@ -1,0 +1,30 @@
+{
+  "name": "novaposhta",
+  "version": "1.0.0",
+  "description": "NovaPoshta API",
+  "main": "./src/NovaPoshta.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taruuuch/novaposhta.git"
+  },
+  "keywords": [
+    "novaposhta",
+    "api",
+    "novaposhta api"
+  ],
+  "author": {
+    "name": "taruuuch",
+    "url": "https://taruuuch.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taruuuch/novaposhta/issues"
+  },
+  "homepage": "https://github.com/taruuuch/novaposhta",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
