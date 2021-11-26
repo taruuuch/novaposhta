@@ -1,4 +1,5 @@
 import axios from 'axios'
+import queryString from 'query-string'
 
 export class ApiClient {
     constructor(apiKey) {
@@ -11,8 +12,11 @@ export class ApiClient {
         })
     }
 
-    async request({ method = 'get', url, headers = {}, data = {} }) {
-        const response = await this.axiosInstance({
+    async request({ method = 'get', endpoint, headers = {}, params = [], data = {} }) {
+        const query = `?${queryString.stringify(queryParams)}`;
+        const url = `${endpoint}${query}`;
+
+        return this.axiosInstance({
             method,
             url,
             headers,
@@ -21,7 +25,25 @@ export class ApiClient {
                 apiKey: this.apiKey
             })
         })
+    }
 
-        return response;
+    get(endpoint, params, headers) {
+        return this.request({ endpoint, method: 'get', params, headers })
+    }
+
+    post({ endpoint, data = {}, headers = undefined }) {
+        return this.request({ endpoint, method: 'post', data, headers })
+    }
+
+    patch({ endpoint, data = {}, headers = undefined }) {
+        return this.request({ endpoint, method: 'patch', data, headers })
+    }
+
+    put(endpoint, data = {}, headers = undefined) {
+        return this.request({ endpoint, method: 'put', data, headers })
+    }
+
+    delete(endpoint, data = {}, headers) {
+        return this.request({ endpoint,  method: 'delete', data, headers })
     }
 }

@@ -1,0 +1,12 @@
+{
+    "extends": "airbnb",
+    "plugins": [],
+    "rules": {
+        "no-console": 1,
+        "semi" : [ 2, "always" ],
+        "indent": [ "error" , 4 ],
+        "key-spacing": "error",
+        "eol-last": "error",
+        "no-multiple-empty-lines": "error"
+    }
+}
