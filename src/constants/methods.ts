@@ -37,7 +37,11 @@ export default {
         save: 'save',
         update: 'update',
     },
-    contactPerson: { delete: 'delete', save: 'save', update: 'update' },
+    contactPerson: {
+        delete: 'delete',
+        save: 'save',
+        update: 'update'
+    },
     internetDocument: {
         delete: 'delete',
         generateReport: 'generateReport',

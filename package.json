@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/taruuuch/novaposhta",
   "dependencies": {
+    "@types/node": "^16.11.11",
     "axios": "^0.24.0",
     "query-string": "^7.0.1"
   },
